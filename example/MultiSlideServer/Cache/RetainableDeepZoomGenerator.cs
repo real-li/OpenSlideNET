@@ -36,33 +36,33 @@ namespace MultiSlideServer.Cache
             }
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                bool lockTaken = false;
-                _lock.Enter(ref lockTaken);
-                try
-                {
-                    _disposed = true;
-                    if (_retainedCount == 0)
-                    {
-                        base.Dispose(true);
-                    }
-                }
-                finally
-                {
-                    if (lockTaken)
-                    {
-                        _lock.Exit();
-                    }
-                }
-            }
-            else
-            {
-                base.Dispose(false);
-            }
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        bool lockTaken = false;
+        //        _lock.Enter(ref lockTaken);
+        //        try
+        //        {
+        //            _disposed = true;
+        //            if (_retainedCount == 0)
+        //            {
+        //                base.Dispose(true);
+        //            }
+        //        }
+        //        finally
+        //        {
+        //            if (lockTaken)
+        //            {
+        //                _lock.Exit();
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        base.Dispose(false);
+        //    }
+        //}
 
         public bool IsRetained
         {
@@ -118,7 +118,7 @@ namespace MultiSlideServer.Cache
                     {
                         if (_disposed)
                         {
-                            base.Dispose(true);
+                           // base.Dispose(true);
                         }
                     }
                 }

@@ -46,6 +46,7 @@ namespace OpenSlideNET.Tests
                 Assert.Throws<ArgumentOutOfRangeException>(() => { dz.GetTile(0, -1, 0, out var _); });
                 Assert.Throws<ArgumentOutOfRangeException>(() => { dz.GetTile(0, 1, 0, out var _); });
             }
+            var s = "";
         }
 
         [Fact]
