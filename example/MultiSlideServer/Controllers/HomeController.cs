@@ -17,6 +17,7 @@ namespace MultiSlideServer.Controllers
         [HttpGet("/")]
         public IActionResult Index()
         {
+            var name=_provider.Images[0].Name; 
             return View(_provider.Images.Select(i => i.Name));
         }
 
