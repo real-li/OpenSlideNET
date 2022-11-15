@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>OpenSlideNET.ImageExtensions</PackageId>
+    <Title>OpenSlideNET.ImageExtensions</Title>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Description>.NET bindings for OpenSlide with Deep Zoom support.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PooledGrowableBufferHelper" Version="$(PooledGrowableBufferHelperPackageVersion)" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="$(SixLaborsImageSharpPackageVersion)" />
+    <PackageReference Include="System.Buffers" Version="$(SystemBuffersPackageVersion)" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="$(SystemRuntimeCompilerServicesUnsafePackageVersion)" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\OpenSlideNET\OpenSlideNET.csproj" />
+  </ItemGroup>
+
+</Project>
